@@ -2,8 +2,6 @@ part 'congressman.g.dart';
 
 class Congressman {
 
-  final String zero = "Sem Informacoes de contato";
-
   final int id;
   final String name;
   final String party;
