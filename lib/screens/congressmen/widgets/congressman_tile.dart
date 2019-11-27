@@ -20,7 +20,7 @@ class CongressmanTile extends StatelessWidget {
         children: <Widget>[
           AspectRatio(
             aspectRatio: 16 / 9,
-            child: Image.network(congressman.photo),
+            child: Image.network(congressman.photo, scale: 1,),
           ),
           Row(
             children: <Widget>[

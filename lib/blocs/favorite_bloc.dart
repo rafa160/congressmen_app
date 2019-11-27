@@ -1,6 +1,7 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:congressman_app/models/congressman.dart';
 import 'dart:async';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class FavoriteBloc implements BlocBase{
 
@@ -9,6 +10,12 @@ class FavoriteBloc implements BlocBase{
   final StreamController<Map<int, Congressman>> _favoriteController = StreamController<Map<int, Congressman>>.broadcast();
   Stream<Map<int,Congressman>> get outFavorite => _favoriteController.stream;
 
+
+//  FavoriteBloc(){
+//    SharedPreferences.getInstance().then((prefs){
+//      /// if some day I have saved a favorite it will return it
+//    });
+//  }
 
   void toggleFavorite(Congressman congressman){
     //check if the congressman id its already on fav list

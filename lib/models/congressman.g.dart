@@ -11,6 +11,7 @@ Congressman _$CongressmanFromJson(Map<String, dynamic> json){
   );
 }
 
+
 Map<String,dynamic> _$CongressmanToJson(Congressman instance) => <String, dynamic>{
   'id': instance.id,
   'nome': instance.name,

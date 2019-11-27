@@ -21,6 +21,8 @@ class Congressman {
   static fromJsonArray(List<dynamic> jsonArray) => _$CongressmanFromJsonArray(jsonArray);
 
 
+
+
   int getId(){
     if(id == null){
       return id;

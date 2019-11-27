@@ -2,6 +2,12 @@
 
 App that use goverment api to check informations about all congressman from Brazil
 
+Here you can check a lot of details from the congressmen.
+
+- How much the spend during the year
+- All their speeches
+- Their situation if are able or not
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

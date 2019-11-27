@@ -1,6 +1,8 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:congressman_app/blocs/congressmen_bloc.dart';
+import 'package:congressman_app/blocs/favorite_bloc.dart';
 import 'package:congressman_app/delegates/data_search.dart';
+import 'package:congressman_app/models/congressman.dart';
 import 'package:congressman_app/screens/congressmen/widgets/congressman_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +22,17 @@ class AllCongressmenSearch extends StatelessWidget {
         actions: <Widget>[
           Align(
             alignment: Alignment.center,
-            child: Text("0",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+            child: StreamBuilder<Map<int,Congressman>>(
+              stream: BlocProvider.of<FavoriteBloc>(context).outFavorite,
+                initialData: {},
+                builder: (context, snapshot){
+                 if(snapshot.hasData){
+                   return Text("${snapshot.data.length}",);
+                 } else {
+                   return Container();
+                 }
+                },
+            ),
           ),
           IconButton(
             icon: Icon(Icons.star),
