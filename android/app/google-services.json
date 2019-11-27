@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "190037527743",
+    "firebase_url": "https://portal-de-dados.firebaseio.com",
+    "project_id": "portal-de-dados",
+    "storage_bucket": "portal-de-dados.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190037527743:android:1411c4dae5cc1f7750ca0a",
+        "android_client_info": {
+          "package_name": "br.com.congressman.congressman_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "190037527743-7l64jrknimkcn99ensv9uu1m92c3ptuf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsvw2o0Shfqw6lg0S7_0CQ10nbM2v7HiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "190037527743-7l64jrknimkcn99ensv9uu1m92c3ptuf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
