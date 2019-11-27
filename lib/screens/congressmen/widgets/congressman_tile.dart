@@ -1,3 +1,5 @@
+import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:congressman_app/blocs/favorite_bloc.dart';
 import 'package:congressman_app/models/congressman.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +10,9 @@ class CongressmanTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final bloc = BlocProvider.of<FavoriteBloc>(context);
+
     return Container(
       margin: EdgeInsets.symmetric(vertical: 15),
       child: Column(
@@ -53,12 +58,25 @@ class CongressmanTile extends StatelessWidget {
                             Flexible(
                               child: Column(
                                 children: <Widget>[
-                                  IconButton(
-                                      icon: Icon(
-                                        Icons.star_border,
-                                        color: Colors.teal,
-                                      ),
-                                      onPressed: () {}),
+                                  ///  check if the congressman its in the fav list or not
+                                  StreamBuilder<Map<int, Congressman>>(
+                                    stream: bloc.outFavorite,
+                                    initialData:{},
+                                    builder: (context, snapshot) {
+                                      if (snapshot.hasData) {
+                                        return IconButton(
+                                            icon: Icon(
+                                              snapshot.data.containsKey(congressman.id) ? Icons.star : Icons.star_border,
+                                              color: Colors.teal,
+                                            ),
+                                            onPressed: () {
+                                              bloc.toggleFavorite(congressman);
+                                            });
+                                      } else {
+                                        return CircularProgressIndicator();
+                                      }
+                                    },
+                                  ),
                                 ],
                               ),
                             ),
