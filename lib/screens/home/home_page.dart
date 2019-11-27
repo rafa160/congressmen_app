@@ -32,6 +32,9 @@ class _HomePageState extends State<HomePage> {
   Widget _listOfItens() {
     return ListView(
       children: <Widget>[
+        SizedBox(
+          height: 8,
+        ),
         InkWell(
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(builder: (context)=> AllCongressmenSearch()));
@@ -60,8 +63,13 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
+        SizedBox(
+          height: 8,
+        ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context)=> AllCongressmenSearch()));
+          },
           child: Card(
             margin: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             child: Column(
@@ -71,6 +79,7 @@ class _HomePageState extends State<HomePage> {
                   height: 100,
                   child: Image.network(
                     "https://g37.com.br/imagens/88672/governo-de-minas-investiga-prejuizo-aos-cofres-publicos-de-mais-de-r-74-milhoes_20112019204610.jpg",
+
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -86,6 +95,9 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+        ),
+        SizedBox(
+          height: 8,
         ),
         InkWell(
           onTap: () {},
@@ -113,6 +125,9 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+        ),
+        SizedBox(
+          height: 8,
         ),
       ],
     );

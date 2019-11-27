@@ -23,6 +23,9 @@ class CongressmanTile extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
+                    SizedBox(
+                      height: 20,
+                    ),
                     Center(
                       child: Text(
                         "INFORMAÇÕES",
@@ -52,7 +55,7 @@ class CongressmanTile extends StatelessWidget {
                                 children: <Widget>[
                                   IconButton(
                                       icon: Icon(
-                                        Icons.star,
+                                        Icons.star_border,
                                         color: Colors.teal,
                                       ),
                                       onPressed: () {}),

@@ -1,11 +1,10 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:congressman_app/blocs/congressmen_bloc.dart';
-import 'package:congressman_app/delegates/data_search.dart';
 import 'package:congressman_app/screens/congressmen/widgets/congressman_tile.dart';
 import 'package:flutter/material.dart';
 
+class CongressmenExpenses extends StatelessWidget {
 
-class AllCongressmenSearch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +30,7 @@ class AllCongressmenSearch extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.search),
             onPressed: () async {
-              String result = await showSearch(context: context, delegate: DataSearch());
-              //access your bloc
-              if(result != null) BlocProvider.of<CongressmenBloc>(context).inSearch.add(result);
-              print(result);
+
             },
           ),
         ],
