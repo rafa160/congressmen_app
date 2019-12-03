@@ -14,6 +14,8 @@ class Api {
     return decode(response);
 
   }
+
+
   
   Future<List<Event>> searchEvent() async {
     http.Response responseEvent = await http.get("https://dadosabertos.camara.leg.br/api/v2/eventos?ordem=ASC&ordenarPor=dataHoraInicio");
@@ -29,6 +31,7 @@ class Api {
             return Event.fromJson(map);
           }
       ).toList();
+      print(event);
       return event;
     } else {
       throw Exception("Falha ao carregar Dados");

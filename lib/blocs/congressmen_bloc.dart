@@ -14,7 +14,7 @@ class CongressmenBloc implements BlocBase {
 
   List<Congressman> congressmen;
 
-  ///***To prevent this error, expose a broadcast Stream. You can convert your stream to a broadcast using ***///
+  ///***To prevent  error, expose a broadcast Stream. You can convert your stream to a broadcast using ***///
 
   final StreamController<List<Congressman>> _congressmenController = StreamController.broadcast();
   // listening the controller to get everything on it

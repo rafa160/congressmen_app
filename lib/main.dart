@@ -12,6 +12,8 @@ void main() {
 Api api = Api();
 
 api.search("marcos");
+
+api.searchEvent();
 runApp(MyApp());}
 
 class MyApp extends StatelessWidget {

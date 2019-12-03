@@ -25,6 +25,86 @@ class Event {
 
 
 
+  int getId(){
+    if(id == null){
+      return id;
+    }
+    return null;
+  }
+
+  String getDayStart(){
+    if(dayStart == null){
+      return dayStart;
+    }
+    return null;
+  }
+
+
+  String getDayEnd(){
+    if(dayEnd == null){
+      return dayEnd;
+    }
+    return null;
+  }
+
+  String getSituation(){
+    if(situation == null){
+      return situation;
+    }
+    return null;
+  }
+
+  String getDescription(){
+    if(description == null){
+      return description;
+    }
+    return null;
+  }
+
+  String getLocal(){
+    if(local == null){
+      return local;
+    }
+    return null;
+  }
+
+  int getPartyId(){
+    if(partId == null){
+      return partId;
+    }
+    return null;
+  }
+
+
+  String getInitials(){
+    if(initials == null){
+      return initials;
+    }
+    return null;
+  }
+
+
+  String getPartyName(){
+    if(partName == null){
+      return partName;
+    }
+    return null;
+  }
+
+
+  String getPartyNickName(){
+    if(partNickname == null){
+      return partNickname;
+    }
+    return null;
+  }
+
+  String getPartyType(){
+    if(partType == null){
+      return partType;
+    }
+    return null;
+  }
 
 
 
